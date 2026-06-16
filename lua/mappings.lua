@@ -26,6 +26,4 @@ del("n", "<leader>h")
 del("n", "<leader>v")
 -- 删除 NvChad 默认的 <leader>th（themes）
 --
-del("n", "<leader>th")
-
-
+-- del("n", "<leader>th")
