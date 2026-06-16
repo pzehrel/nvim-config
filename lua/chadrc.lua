@@ -6,8 +6,8 @@
 local M = {}
 
 M.base46 = {
-  theme = "vscode_light",
-  theme_toggle = { "vscode_light", "vscode_dark" },
+  theme = "flex-light",
+  theme_toggle = { "flex-light", "github_dark" },
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
