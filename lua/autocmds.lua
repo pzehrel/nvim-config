@@ -1,3 +1,3 @@
 require "nvchad.autocmds"
--- require "utils.input_method"
+require "utils.input_method"
 
