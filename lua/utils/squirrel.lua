@@ -7,6 +7,15 @@ local M = {}
 -- 可配置：Squirrel CLI 路径，通过 vim.g.squirrel_cli 覆盖
 local SQUIRREL_CLI = vim.g.squirrel_cli or "/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel"
 
+-- 可配置：是否在切换 ascii/nascii 前自动激活鼠须管输入源
+local AUTO_ACTIVATE = vim.g.squirrel_auto_activate
+if AUTO_ACTIVATE == nil then
+  AUTO_ACTIVATE = true
+end
+
+-- 可配置：鼠须管输入源 ID（多方案用户可能需要覆盖）
+local SQUIRREL_INPUT_SOURCE = vim.g.squirrel_input_source or "im.rime.inputmethod.Squirrel.Hans"
+
 -- 缓存当前输入法状态: "ascii" | "nascii" | nil
 local cached_state = nil
 
@@ -83,13 +92,14 @@ function M.get_state()
   return nil
 end
 
--- 默认鼠须管输入源 ID
-local SQUIRREL_INPUT_SOURCE = "im.rime.inputmethod.Squirrel.Hans"
-
 ---激活鼠须管输入源（在切换 ascii/nascii 前调用，避免当前不是鼠须管时命令无效）
 ---@param source_id? string
 ---@return boolean ok
 function M.activate(source_id)
+  if not AUTO_ACTIVATE then
+    return true
+  end
+
   source_id = source_id or SQUIRREL_INPUT_SOURCE
   local ok, output = exec({ "--select-input-source", source_id })
 

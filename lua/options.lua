@@ -22,6 +22,8 @@ vim.o.breakindentopt = "shift:1"
 -- Squirrel (鼠须管) 自动输入法切换配置
 -- 详见 lua/utils/input_method.lua
 -- vim.g.squirrel_cli = "/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel"
+-- vim.g.squirrel_input_source = "im.rime.inputmethod.Squirrel.Hans"
+-- vim.g.squirrel_auto_activate = true              -- 切换前是否自动激活鼠须管
 -- vim.g.squirrel_default_input_method = "english" -- "chinese" | "english"
 -- vim.g.squirrel_insert_enter_force = false       -- 是否强制触发切换提醒
 -- vim.g.squirrel_sync_on_focus = true             -- 切回窗口时是否同步输入法
