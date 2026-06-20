@@ -16,6 +16,15 @@ M.base46 = {
 		["@comment"] = { fg = { "light_grey", 5 }, italic = true },
 	},
 
+	-- 仅针对暗色主题 tokyodark，把主背景色改为和 Ghostty TokyoNight 一致
+	changed_themes = {
+		tokyodark = {
+			base_16 = {
+				base00 = "#1a1b26",
+			},
+		},
+	},
+
 
 	hl_add = {
 		-- diffview: 只保留 diff 背景，不覆盖代码语法前景色
