@@ -24,6 +24,12 @@ M.base46 = {
 			base_16 = {
 				base00 = "#1a1b26",
 			},
+			polish_hl = {
+				nvimtree = {
+					NvimTreeNormal = { bg = "#1a1b26" },
+					NvimTreeNormalNC = { bg = "#1a1b26" },
+				},
+			},
 		},
 	},
 	---@diagnostic enable: missing-fields
