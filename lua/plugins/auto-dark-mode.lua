@@ -4,6 +4,7 @@
 -- @see: https://github.com/NvChad/NvChad/issues/2721
 return {
   "f-person/auto-dark-mode.nvim",
+  enabled = false,
   event = "VeryLazy",
   config = function()
     local function update_toggle_icon(theme_name)
