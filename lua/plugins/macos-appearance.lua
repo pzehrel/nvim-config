@@ -4,6 +4,8 @@ return {
   "pzehrel/macos-appearance.nvim",
   event = "UIEnter",
   config = function()
-    require("macos-appearance").setup()
+    require("macos-appearance").setup {
+      callback = require("macos-appearance.adapters.nvchad"),
+    }
   end,
 }
